@@ -1,0 +1,6 @@
+interface:
+  display_name: "Email Correspondence"
+  short_description: "Read, draft, record and verify approved email sends"
+  default_prompt: "Use $email-correspondence to review the relevant thread and prepare a reply for approval."
+policy:
+  allow_implicit_invocation: true

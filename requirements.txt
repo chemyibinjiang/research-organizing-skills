@@ -1,0 +1,7 @@
+# Versions used for the initial offline validation; not a claim of latest versions.
+imap-tools==1.13.0
+keyring==25.6.0
+pycryptodome==3.23.0
+cryptography==50.0.0
+zstandard==0.25.0
+PyYAML==6.0.3

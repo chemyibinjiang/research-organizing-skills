@@ -1,0 +1,10 @@
+{
+  "to": ["colleague@example.invalid"],
+  "cc": [],
+  "subject": "Synthetic coordination example - do not send",
+  "body": "Dear colleague,\n\nThis is synthetic test content, not a real request.\n",
+  "attachments": [],
+  "in_reply_to": null,
+  "references": [],
+  "reply_to": []
+}

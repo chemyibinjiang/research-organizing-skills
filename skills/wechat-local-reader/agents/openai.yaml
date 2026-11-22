@@ -1,0 +1,6 @@
+interface:
+  display_name: "WeChat Reading"
+  short_description: "Read selected chats and trace decisions to evidence"
+  default_prompt: "Use $wechat-local-reader to check the selected chat for recent decisions and actions."
+policy:
+  allow_implicit_invocation: true

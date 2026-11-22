@@ -1,0 +1,27 @@
+{
+  "wechat": {
+    "default": {
+      "python": "C:/Path/To/Python311/python.exe",
+      "source_root": "C:/Path/To/Your/WeChat/account/db_storage",
+      "key_path": "C:/Private/Communication/existing_database_key.dpapi",
+      "work_root": "C:/Private/Communication/wechat-evidence",
+      "runtime_paths": [],
+      "timezone_offset": "+08:00"
+    }
+  },
+  "email": {
+    "work": {
+      "python": "C:/Path/To/Python311/python.exe",
+      "helper": "C:/Path/To/research-organizing-skills/adapters/imap_account.py",
+      "username": "you@institution.example",
+      "imap_host": "imap.institution.example",
+      "imap_port": 993,
+      "smtp_host": "smtp.institution.example",
+      "smtp_port": 465,
+      "sent_folder": "Sent Items",
+      "folders": ["INBOX", "Sent Items"],
+      "work_root": "C:/Private/Communication/email-evidence",
+      "runtime_paths": []
+    }
+  }
+}
