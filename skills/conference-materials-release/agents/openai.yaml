@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conference Materials Release"
+  short_description: "Keep scripts, slides and print packages in agreement"
+  default_prompt: "Use $conference-materials-release to prepare a checked print-only package from these approved materials."
+policy:
+  allow_implicit_invocation: true

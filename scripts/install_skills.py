@@ -12,10 +12,14 @@ def plan(destination):
     if destination == ROOT or ROOT in destination.parents:
         raise ValueError('Choose an installation directory outside this repository')
     actions = []
-    for name in ('wechat-local-reader', 'email-correspondence'):
-        source = ROOT / 'skills' / name
+    for source in sorted((ROOT / 'skills').iterdir()):
+        if not source.is_dir() or not (source / 'SKILL.md').is_file():
+            continue
+        if source.is_symlink() or (ROOT / 'skills') not in source.resolve().parents:
+            raise ValueError('Unexpected linked skill')
+        name = source.name
         for path in sorted(source.rglob('*')):
-            if not path.is_file() or path.suffix not in ('.md', '.py', '.yaml'):
+            if not path.is_file() or path.suffix not in ('.md', '.py', '.yaml', '.json', '.csv'):
                 continue
             if path.is_symlink() or source not in path.resolve().parents:
                 raise ValueError('Unexpected linked source')

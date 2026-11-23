@@ -1,7 +1,8 @@
 # Research Organizing Skills
 
 Human-led AI assistance for research coordination: reading selected WeChat
-conversations, handling email, and keeping decisions and handovers traceable.
+conversations, handling email, planning academic programmes and delivering event
+materials with traceable decisions and handovers.
 
 These workflows grew out of a session secretary's work at a chemistry conference
 and were refactored afterwards for other projects. They are not an autonomous
@@ -13,10 +14,17 @@ conference organizer or an institution-endorsed product.
 | --- | --- | --- |
 | `wechat-local-reader` | Selected group/private-chat retrieval, committed snapshots, source-linked summaries, attachment mapping | Windows and a compatible local WeChat database with an existing authorized key; no sending or key recovery |
 | `email-correspondence` | Read Inbox/Sent, record correspondence, prepare threaded attachments, send approved messages, verify Sent | Human approval; no blind retry; local adapter is plain-text IMAP/SMTP |
+| [`conference-state-handoff`](skills/conference-state-handoff/SKILL.md) | Reconcile decisions, owners, pending work and topic handoffs | Procedure and template; no automatic cross-chat synchronization |
+| [`speaker-reviewer-planning`](skills/speaker-reviewer-planning/SKILL.md) | Expert shortlists, diversity accounting, reviewer matching, stable IDs and late changes | Human academic decisions; executable group-assignment checks |
+| [`conference-programme-check`](skills/conference-programme-check/SKILL.md) | Chair/speaker/interview/tour conflicts and transfer buffers | Executable explicit-interval checks; no inferred traffic or availability |
+| [`participant-logistics`](skills/participant-logistics/SKILL.md) | Reception, accommodation, meals, vehicles and volunteer handoffs | Procedure and blank roster; payment and booking evidence stay separate |
+| [`conference-materials-release`](skills/conference-materials-release/SKILL.md) | Scripts, run sheets, slides, seating and print-only delivery | Procedure and manifest; requires document tools for authoring/rendering |
 | `templates/` | Current-state, handover, contact and correspondence templates | Blank starting points, not a shared database or automated coordination engine |
 
 The scripts are usable without an agent. `SKILL.md` files explain how an agent
 should use them. Multiple topic chats are optional, not required infrastructure.
+The five conference workflows were extracted after the event. Their packaged
+instructions and new validators are not claimed to have run during the conference.
 
 ## Start here
 
@@ -25,7 +33,8 @@ should use them. Multiple topic chats are optional, not required infrastructure.
 3. Run `python scripts/run_tests.py`. Tests use synthetic data and fake mail servers.
 4. Preview installation with `python scripts/install_skills.py`; add `--apply`
    to copy the skills. Existing different files are never overwritten.
-5. Configure your own private account profile outside this repository.
+5. For communication tools, configure your own private account profile outside
+   this repository. The conference checkers need only Python and synthetic/local JSON.
 
 Examples of agent requests:
 
@@ -33,6 +42,15 @@ Examples of agent requests:
   Summarize changed decisions and actions, with the source messages."
 - "Use $email-correspondence to check this collaborator's thread and prepare a
   reply with these attachments. Do not send yet."
+- "Use $speaker-reviewer-planning to match these abstracts to reviewer expertise,
+  explain the proposed groups and check coverage and declared conflicts."
+- "Use $conference-programme-check to check chair duties, interviews and travel
+  against the approved programme. Keep unknown times explicit."
+- "Use $conference-materials-release to prepare only the final print files and
+  a quantity manifest, preserving the host's manual edits."
+
+See the [Chinese workflow examples](docs/CONFERENCE_WORKFLOWS.zh-CN.md) for how
+these skills fit together, and [offline validation](docs/VALIDATION.md) for commands.
 
 ## Safety and limitations
 

@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "rules": {"reviewers_per_group": 2, "awards_per_group": 1, "max_posters_per_group": 3, "max_groups_per_reviewer": 1},
+  "posters": [
+    {"id": "DEMO-P1", "status": "active"},
+    {"id": "DEMO-P2", "status": "active"},
+    {"id": "DEMO-P3", "status": "withdrawn"},
+    {"id": "DEMO-P4", "status": "display_only"}
+  ],
+  "reviewers": [
+    {"id": "DEMO-R1", "conflicts": []},
+    {"id": "DEMO-R2", "conflicts": []}
+  ],
+  "groups": [
+    {"id": "DEMO-G1", "reviewer_ids": ["DEMO-R1", "DEMO-R2"], "poster_ids": ["DEMO-P1", "DEMO-P2"], "selected_ids": ["DEMO-P2"]}
+  ]
+}

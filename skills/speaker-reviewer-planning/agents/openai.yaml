@@ -1,0 +1,6 @@
+interface:
+  display_name: "Speaker and Reviewer Planning"
+  short_description: "Match expertise, check coverage and track late changes"
+  default_prompt: "Use $speaker-reviewer-planning to propose reviewer groups and check their coverage and declared conflicts."
+policy:
+  allow_implicit_invocation: true

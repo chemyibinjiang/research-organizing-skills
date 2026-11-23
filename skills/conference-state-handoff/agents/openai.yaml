@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conference State and Handoff"
+  short_description: "Track decisions, owners and evidence-backed handoffs"
+  default_prompt: "Use $conference-state-handoff to reconcile recent changes and list the actions still owned by me."
+policy:
+  allow_implicit_invocation: true

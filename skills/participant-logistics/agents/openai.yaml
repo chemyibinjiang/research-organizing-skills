@@ -1,0 +1,6 @@
+interface:
+  display_name: "Participant Logistics"
+  short_description: "Reconcile reception, travel, meals and volunteer duties"
+  default_prompt: "Use $participant-logistics to find gaps in this guest reception and volunteer roster."
+policy:
+  allow_implicit_invocation: true

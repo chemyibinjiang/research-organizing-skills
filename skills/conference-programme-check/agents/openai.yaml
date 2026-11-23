@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conference Programme Check"
+  short_description: "Check timetable overlaps and practical transfer buffers"
+  default_prompt: "Use $conference-programme-check to check this timetable against chair duties, travel and interviews."
+policy:
+  allow_implicit_invocation: true

@@ -7,8 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    for path in (ROOT / 'skills/wechat-local-reader/tests',
-                 ROOT / 'skills/email-correspondence/tests', ROOT / 'tests'):
+    for path in [*sorted((ROOT / 'skills').glob('*/tests')), ROOT / 'tests']:
         result = subprocess.run([sys.executable, '-B', '-m', 'unittest', 'discover',
                                  '-s', str(path), '-v'], cwd=ROOT)
         if result.returncode:

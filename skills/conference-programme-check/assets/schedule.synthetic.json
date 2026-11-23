@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "synthetic": true,
+  "events": [
+    {"id": "lecture-demo", "start": "2030-05-12T14:00:00+08:00", "end": "2030-05-12T14:30:00+08:00", "resources": ["person-demo-1", "hall-demo"], "after_minutes": 5},
+    {"id": "interview-demo", "start": "2030-05-12T14:32:00+08:00", "end": "2030-05-12T14:42:00+08:00", "resources": ["person-demo-1", "interviewer-demo"]},
+    {"id": "departure-demo", "start": null, "end": null, "resources": ["person-demo-1"]}
+  ]
+}
