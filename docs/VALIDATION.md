@@ -13,19 +13,22 @@ The runner discovers each skill's tests plus repository packaging tests.
 | Email | 16 cases retained from the initial package |
 | Programme checker | 12 cases: overlaps, adjacency, buffers, shared corridor, unknown times, offsets, malformed inputs and CLI |
 | Group assignment checker | 14 cases: coverage, withdrawals, display-only entries, declared conflicts, workload, selections and CLI |
-| Packaging and adapter | Installer preview/non-overwrite, all seven skills and their assets, linked references and adapter mocks |
+| Packaging and adapter | Installer preview/non-overwrite, all eight skills and their assets, linked references and adapter mocks |
 
 Checks include committed-WAL selection, cross-shard ordering and identity,
 quoted/forwarded provenance, missing image-key refusal, immutable attachments,
 approval/preflight checks, ambiguous-send retry blocking, proven pre-dispatch
 failure recovery, and refusal to overwrite existing colleague edits.
 
-The five conference skills added after the event are reusable procedural guidance,
+The six conference skills added after the event are reusable procedural guidance,
 not retrospective proof of an autonomous event-management system. The two new
 validators operate on explicitly supplied constraints; their tests do not evaluate
 semantic extraction, expert quality, unreported conflicts or real-world execution.
-State/handoff, logistics and materials instructions have templates but no automated
-end-to-end integration test. Document rendering uses the operator's available tools.
+State/handoff, logistics, materials and exception-handling instructions have templates
+but no automated end-to-end integration test. The exception skill includes seven
+fictional tabletop scenarios and handling notes; these are not scored agent runs
+or evidence of successful real-world recovery. Packaging checks cover its inclusion,
+local links and UI metadata. Document rendering uses the operator's available tools.
 
 Standalone examples, from the repository root:
 

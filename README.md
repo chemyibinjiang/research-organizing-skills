@@ -19,11 +19,12 @@ conference organizer or an institution-endorsed product.
 | [`conference-programme-check`](skills/conference-programme-check/SKILL.md) | Chair/speaker/interview/tour conflicts and transfer buffers | Executable explicit-interval checks; no inferred traffic or availability |
 | [`participant-logistics`](skills/participant-logistics/SKILL.md) | Reception, accommodation, meals, vehicles and volunteer handoffs | Procedure and blank roster; payment and booking evidence stay separate |
 | [`conference-materials-release`](skills/conference-materials-release/SKILL.md) | Scripts, run sheets, slides, seating and print-only delivery | Procedure and manifest; requires document tools for authoring/rendering |
+| [`conference-exception-handling`](skills/conference-exception-handling/SKILL.md) | Triage unexpected changes, assess dependencies, agree fallbacks and verify resolution | Human decision authority; incident template and fictional scenarios, not automatic recovery |
 | `templates/` | Current-state, handover, contact and correspondence templates | Blank starting points, not a shared database or automated coordination engine |
 
 The scripts are usable without an agent. `SKILL.md` files explain how an agent
 should use them. Multiple topic chats are optional, not required infrastructure.
-The five conference workflows were extracted after the event. Their packaged
+The six conference workflows were extracted after the event. Their packaged
 instructions and new validators are not claimed to have run during the conference.
 
 ## Start here
@@ -48,6 +49,8 @@ Examples of agent requests:
   against the approved programme. Keep unknown times explicit."
 - "Use $conference-materials-release to prepare only the final print files and
   a quantity manifest, preserving the host's manual edits."
+- "Use $conference-exception-handling to assess this last-minute cancellation,
+  identify affected duties and propose a recovery. Do not notify anyone yet."
 
 See the [Chinese workflow examples](docs/CONFERENCE_WORKFLOWS.zh-CN.md) for how
 these skills fit together, and [offline validation](docs/VALIDATION.md) for commands.

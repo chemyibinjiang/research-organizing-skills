@@ -24,9 +24,11 @@ class PackagingTests(unittest.TestCase):
             actions = installer.plan(Path(temp) / 'skills')
         sources = {p.relative_to(ROOT).as_posix() for p, _ in actions}
         entrypoints = {p for p in sources if p.endswith('/SKILL.md')}
-        self.assertEqual(len(entrypoints), 7)
+        self.assertEqual(len(entrypoints), 8)
         self.assertIn('skills/conference-programme-check/assets/schedule.synthetic.json', sources)
         self.assertIn('skills/participant-logistics/assets/logistics.template.csv', sources)
+        self.assertIn('skills/conference-exception-handling/assets/incident-record.template.md', sources)
+        self.assertIn('skills/conference-exception-handling/references/scenarios.md', sources)
 
     def test_installer_cannot_target_repository(self):
         installer = module('installer_boundary', ROOT / 'scripts/install_skills.py')
@@ -36,7 +38,8 @@ class PackagingTests(unittest.TestCase):
 
     def test_new_skill_links_resolve_in_standalone_folder(self):
         names = ('conference-state-handoff', 'speaker-reviewer-planning',
-                 'conference-programme-check', 'participant-logistics', 'conference-materials-release')
+                 'conference-programme-check', 'participant-logistics', 'conference-materials-release',
+                 'conference-exception-handling')
         for name in names:
             root = ROOT / 'skills' / name
             source = (root / 'SKILL.md').read_text(encoding='utf-8')

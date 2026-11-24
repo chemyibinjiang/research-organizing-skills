@@ -1,0 +1,6 @@
+interface:
+  display_name: "Conference Exception Handling"
+  short_description: "Resolve unexpected changes with verified handoffs"
+  default_prompt: "Use $conference-exception-handling to assess this unexpected change and propose a recovery with clear approvals and closure checks."
+policy:
+  allow_implicit_invocation: true
