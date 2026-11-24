@@ -12,7 +12,9 @@ Prefer the user's already configured connector/helper. Read
 [local-adapter.md](references/local-adapter.md) for the generic IMAP/SMTP
 adapter; the account settings and existing credential reference live outside this
 skill. Never reset passwords, repair Outlook, replace helpers or switch accounts
-as an implicit part of correspondence work.
+as an implicit part of correspondence work. Confirm that the account's provider
+and organization permit the chosen access method; credentials alone are not
+evidence of that authorization.
 
 ## Read and Record
 

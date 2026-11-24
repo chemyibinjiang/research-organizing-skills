@@ -6,7 +6,8 @@ It contains no password. Do not run the original helper's credential-store/delet
 commands. The adapter calls its existing `saved_password`, `MailBox` and
 `select_readonly` interfaces; it does not modify that helper.
 
-Use the configured Python executable:
+Use the configured Python executable. `work` is the sample profile name, not an
+account or an authorization grant; match it to your own approved private profile:
 
 ```powershell
 $cfg = Get-Content -LiteralPath "$env:LOCALAPPDATA/Codex/communication-skills/profiles.json" -Encoding UTF8 | ConvertFrom-Json
@@ -68,6 +69,7 @@ Verification never appends a synthetic Sent copy. No receipt acknowledgement or
 read receipt is inferred. Errors and refusals remain in the private job log.
 
 To configure another compatible account, add a distinct profile with username,
-IMAP/SMTP TLS hosts/ports, Sent folder, helper path and work root. Verify ownership
-and saved-credential support first. Do not reuse credentials across unrelated
-accounts. OAuth-only mail should use an authenticated connector.
+IMAP/SMTP TLS hosts/ports, Sent folder, helper path and work root. Verify account
+authorization, provider/organizational requirements and saved-credential support
+first. Do not reuse credentials across unrelated accounts. OAuth-only mail should
+use an authenticated connector.

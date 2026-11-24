@@ -31,9 +31,10 @@ account settings. Both CLIs also accept `--config` for a different private path.
 
 Replace sample paths with your own Python executable, account paths and private
 work directories. All example mail addresses and hosts are deliberately non-working.
-The `work` profile name is only a label; verify your real hosts, Sent folder and
-institutional permission with your mail provider. Do not infer account validity
-from the label. Keep profile names in CLI commands consistent with your file.
+The `work` profile name is only a placeholder. Confirm that your mail provider
+and organization permit this access method, then verify your real hosts and Sent
+folder. A working login does not establish organizational authorization. Keep
+profile names in CLI commands consistent with your file.
 
 ## Mail authentication
 

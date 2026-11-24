@@ -65,15 +65,15 @@ these skills fit together, and [offline validation](docs/VALIDATION.md) for comm
 - Live provider compatibility, complete WeChat synchronization and on-site outcomes
   are not established by the offline tests.
 - The generic mail adapter requires each user to configure an authorized account.
-  Confirm provider and organizational permission before connecting.
+  Confirm provider and organizational permission before connecting; possession of
+  a password or installing a skill does not establish that permission.
 
 See [Validation and provenance](docs/VALIDATION.md) and [Data boundaries](docs/DATA_BOUNDARIES.md).
 
 ## Sharing and license
 
-This is initially a private collaboration repository. Colleagues need repository
-access from its owner. No open-source license has been selected; do not describe
-it as open source or assume permission for public redistribution. Contributors
-should agree code ownership and licensing before a public release.
+This repository is publicly viewable. No open-source license has been selected;
+public visibility alone does not grant reuse or redistribution rights. Contributors
+should agree code ownership and licensing before distributing derivatives.
 
 The proposed article and underlying conference evidence are not part of this repository.
