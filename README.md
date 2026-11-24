@@ -12,8 +12,8 @@ conference organizer or an institution-endorsed product.
 
 | Component | Capability | Boundary |
 | --- | --- | --- |
-| `wechat-local-reader` | Selected group/private-chat retrieval, committed snapshots, source-linked summaries, attachment mapping | Windows and a compatible local WeChat database with an existing authorized key; no sending or key recovery |
-| `email-correspondence` | Read Inbox/Sent, record correspondence, prepare threaded attachments, send approved messages, verify Sent | Human approval; no blind retry; local adapter is plain-text IMAP/SMTP |
+| [`wechat-local-reader`](skills/wechat-local-reader/SKILL.md) | Selected group/private-chat retrieval, committed snapshots, source-linked summaries, attachment mapping | Windows and a compatible local WeChat database with an existing authorized key; no sending or key recovery |
+| [`email-correspondence`](skills/email-correspondence/SKILL.md) | Read Inbox/Sent, record correspondence, prepare threaded attachments, send approved messages, verify Sent | Human approval; no blind retry; local adapter is plain-text IMAP/SMTP |
 | [`conference-state-handoff`](skills/conference-state-handoff/SKILL.md) | Reconcile decisions, owners, pending work and topic handoffs | Procedure and template; no automatic cross-chat synchronization |
 | [`speaker-reviewer-planning`](skills/speaker-reviewer-planning/SKILL.md) | Expert shortlists, diversity accounting, reviewer matching, stable IDs and late changes | Human academic decisions; executable group-assignment checks |
 | [`conference-programme-check`](skills/conference-programme-check/SKILL.md) | Chair/speaker/interview/tour conflicts and transfer buffers | Executable explicit-interval checks; no inferred traffic or availability |
